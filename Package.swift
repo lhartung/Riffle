@@ -3,6 +3,13 @@ import PackageDescription
 let package = Package(
     name: "Riffle",
     dependencies: [
-        .Package(url: "Packages/", majorVersion: 0)
+        .Package(url: "", majorVersion: 0)
+    ]
+    targets: [
+        Target(
+            name: "Riffle",
+            dependencies: [.Target(name: "Mantle")]),
+        Target(
+            name: "Mantle")
     ]
 )
