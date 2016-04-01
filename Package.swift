@@ -1,5 +1,8 @@
 import PackageDescription
 
 let package = Package(
-    name: "Riffle"
+    name: "Riffle",
+    dependencies: [
+        .Package(url: "Packages/Mantle", majorVersion: 0)
+    ]
 )
